@@ -17,6 +17,11 @@
   list-style: none;
 }
 
+.hero-list__element {
+  display: flex;
+  align-items: center;
+}
+
 .hero-list__element:nth-child(even) {
   background-color: #eee;
 }

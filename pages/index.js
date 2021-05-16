@@ -1,3 +1,4 @@
+import { Avatar } from 'antd';
 import Link from 'next/link';
 
 import axios from '../helpers/axios';
@@ -27,10 +28,15 @@ const HeroElement = ({ id, name, url }) => {
     <li className={styles['hero-list__element']}>
       <Link href={`/hero/${id}`}>
         <a className={styles['hero-list__link']}>
-          <img 
+          <Avatar 
             alt={`Photo of ${name}`} 
             className={styles['hero-list__img']}
+            shape='square'
+            size={150}
             src={url} 
+            style={{
+              margin : '2em'
+            }}
           />
           <p className={styles['hero-list__name']}>{name}</p>
         </a>

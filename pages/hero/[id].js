@@ -1,3 +1,5 @@
+import { Avatar } from 'antd';
+
 import axios from '../../helpers/axios';
 import { useRouter } from 'next/router'; 
 
@@ -18,11 +20,20 @@ const Hero = ({ image, name, powerstats }) => {
   };
 
   return (
-    <>
+    <div
+      style={{
+        textAlign : 'center'
+      }}
+    >
       <h1>Hero {name}</h1>
-      <img
+      <Avatar
         alt={`Photo of ${name}`}
+        shape='square'
+        size={200}
         src={image.url}
+        style={{
+          margin : '2em'
+        }}
       />
       <h2>Hero's stats</h2>
       <p>
@@ -43,7 +54,7 @@ const Hero = ({ image, name, powerstats }) => {
       <p>
         strength: {strength}   
       </p>
-    </>
+    </div>
   );
 };
 

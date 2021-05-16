@@ -3,7 +3,13 @@ import Footer from './Footer';
 export default function Layout({ children }) {
   return (
     <>
-      {children}
+      <div
+        style={{
+          minHeight : '100vh'
+        }}
+      >
+        {children}
+      </div>
       <Footer />
     </>
   );
